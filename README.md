@@ -19,4 +19,4 @@ git push -d origin master 删除远程仓库分支
 克隆远程分支
 git clone https://github.com/LanLinxiang/MyHome
 
-
+远程 拉取 git pull origin 分支名
