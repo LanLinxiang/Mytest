@@ -29,8 +29,12 @@
 
     <mvc:interceptors>
         <mvc:interceptor>
+            <!--         攔截所有請求       -->
             <mvc:mapping path="/**"/>
+            <!--         不攔截登錄頁面下的請求   -->
             <mvc:exclude-mapping path="/settings/user/login.do"/>
+            <!--         不攔截跳轉登錄頁面下的請求   -->
+            <mvc:exclude-mapping path="/settings/user/toLogin.do"/>
             <bean class="com.llx.crm.interceptor.LoginInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>

@@ -10,6 +10,10 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 <link href="jquery/bootstrap_3.3.0/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
 <script type="text/javascript" src="jquery/jquery-1.11.1-min.js"></script>
 <script type="text/javascript" src="jquery/bootstrap_3.3.0/js/bootstrap.min.js"></script>
+<%--	頁面加載完成後要加載的業務，適用於十天免登錄--%>
+	<script >
+
+	</script>
 
 </head>
 <body>
@@ -36,7 +40,7 @@ String basePath = request.getScheme() + "://" + request.getServerName() + ":" + 
 					</div>
 					<div class="checkbox"  style="position: relative;top: 30px; left: 10px;">
 						<label>
-							<input type="checkbox"> 十天内免登录
+							<input id ="ck" type="checkbox" name="flag" value="a"> 十天内免登录
 						</label>
 						&nbsp;&nbsp;
 						<span id="msg"></span>

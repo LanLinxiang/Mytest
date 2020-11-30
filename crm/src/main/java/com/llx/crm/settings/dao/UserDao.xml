@@ -7,7 +7,7 @@
 
 <!--    User login(@Param("loginAct") String loginAct, @Param("loginPwd") String md5);-->
 <select id="login" resultType="user">
-    select  * from tbl_user where loginAct=${loginAct} and loginPwd=${loginPwd}
+    select  * from tbl_user where loginAct=#{loginAct} and loginPwd=#{loginPwd}
 </select>
 
 </mapper>
