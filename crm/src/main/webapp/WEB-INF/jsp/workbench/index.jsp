@@ -36,8 +36,8 @@
 			$(this).children("a").css("color","white");
 		});
 		
-		
-		window.open("main/index.html","workareaFrame");
+		//打开Frame 页面
+		window.open("/workbench/main/toindex.do","workareaFrame");
 		
 	});
 	
@@ -130,7 +130,7 @@
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-					<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location.href='login.jsp';">确定</button>
+					<button type="button" class="btn btn-primary" data-dismiss="modal" onclick="window.location.href='/settings/user/logout.do';">确定</button>
 				</div>
 			</div>
 		</div>
@@ -143,19 +143,19 @@
 			<ul>
 				<li class="dropdown user-dropdown">
 					<a href="javascript:void(0)" style="text-decoration: none; color: white;" class="dropdown-toggle" data-toggle="dropdown">
-						<span class="glyphicon glyphicon-user"></span> zhangsan <span class="caret"></span>
+						<span class="glyphicon glyphicon-user"></span> ${user.name} <span class="caret"></span>
 					</a>
 					<ul class="dropdown-menu">
-						<li><a href="settings/index.html"><span class="glyphicon glyphicon-wrench"></span> 系统设置</a></li>
+						<li><a href="settings/toIndex.do"><span class="glyphicon glyphicon-wrench"></span> 系统设置</a></li>
 						<li><a href="javascript:void(0)" data-toggle="modal" data-target="#myInformation"><span class="glyphicon glyphicon-file"></span> 我的资料</a></li>
 						<li><a href="javascript:void(0)" data-toggle="modal" data-target="#editPwdModal"><span class="glyphicon glyphicon-edit"></span> 修改密码</a></li>
-						<li><a href="javascript:void(0);" data-toggle="modal" data-target="#exitModal"><span class="glyphicon glyphicon-off"></span> 退出</a></li>
+						<li><a href="javascript:void(0)" data-toggle="modal" data-target="#exitModal"><span class="glyphicon glyphicon-off"></span> 退出</a></li>
 					</ul>
 				</li>
 			</ul>
 		</div>
 	</div>
-	
+
 	<!-- 中间 -->
 	<div id="center" style="position: absolute;top: 50px; bottom: 30px; left: 0px; right: 0px;">
 	

@@ -33,5 +33,14 @@ public class HandleFlag {
 
     }
 
+    public static Map<String,Object> erro(String msg){
+
+        Map<String,Object> map = new HashMap<>();
+        map.put("success",false);
+        map.put("msg",msg);
+        return map;
+
+    }
+
 
 }

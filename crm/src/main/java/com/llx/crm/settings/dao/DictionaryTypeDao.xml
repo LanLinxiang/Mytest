@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.llx.crm.settings.dao.DictionaryTypeDao">
+<!--    List<DicType> findAll();-->
+    <select id="findAll" resultType="DicType">
+        select * from tbl_dic_type
+    </select>
+
+    <select id="checkCode" resultType="int">
+        select count(*) from tbl_dic_type where code = #{code}
+    </select>
+
+</mapper>

@@ -5,12 +5,11 @@ import com.llx.crm.settings.domain.User;
 import com.llx.crm.settings.service.UserService;
 import com.llx.crm.utils.MD5Util;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.Cookie;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.*;
 
 /**
  * Title: UserController
@@ -112,6 +111,35 @@ public class UserController {
 
         }
 
+
+        return "/login";
+    }
+
+    /**
+     * Description:退出登录，清除SEEEION的信息 以及cookie
+     * @return
+     * @date 2020/12/1 23:11
+     */
+    @RequestMapping("/logout.do")
+    public String Logout(HttpSession session, HttpServletRequest request,HttpServletResponse response){
+        //删除session中的信息
+        //session.removeAttribute("user");
+        session.invalidate();
+
+        //清除Cookie 中的数据
+        Cookie[] cookies = request.getCookies();
+        Cookie cookie1 = new Cookie("loginAct","");
+        Cookie cookie2 = new Cookie("loginPwd","");
+        //设置存活时间为0
+        cookie1.setMaxAge(0);
+        cookie2.setMaxAge(0);
+
+        cookie1.setPath("/");
+        cookie2.setPath("/");
+
+        //写入Cookie
+        response.addCookie(cookie1);
+        response.addCookie(cookie2);
 
         return "/login";
     }

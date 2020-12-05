@@ -61,7 +61,7 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
 
-  <!--配置欢迎页面:访问127.0.0.1:8080/crm,就可以默认跳转到该页面了-->
+  <!--配置欢迎页面:访问127.0.0.1:8080/,就可以默认跳转到该页面了-->
   <welcome-file-list>
     <!--放松请求,访问登录页面,后台控制访问-->
     <welcome-file>/index.xml</welcome-file>
